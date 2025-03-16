@@ -17,41 +17,13 @@
             justify-content: center; /* مرکز چیدمان عمودی */
             align-items: center; /* مرکز چیدمان افقی */
         }
-        h2 {
+        h1 {
             font-size: 2em; /* اندازه متن برای هدر */
             margin: 10px 0; /* فاصله بالا و پایین */
         }
-        .free-user-search-box {
-            display: flex; /* استفاده از flexbox برای چیدمان */
-            align-items: center; /* مرکز چیدمان عمودی */
-            margin-top: 20px; /* فاصله از هدر */
-        }
-        .free-search-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px; /* عرض آیکون */
-            height: 40px; /* ارتفاع آیکون */
-            margin-right: 10px; /* فاصله از باکس جستجو */
-        }
-        .form-control {
-            padding: 10px; /* padding برای باکس جستجو */
-            width: 300px; /* عرض باکس جستجو */
-            border: 1px solid #ccc; /* حاشیه */
-            border-radius: 5px; /* گوشه‌های گرد */
-        }
-        .btn-ok {
-            background-color: #007bff; /* رنگ دکمه */
-            color: white; /* رنگ متن دکمه */
-            border: none; /* حذف حاشیه */
-            border-radius: 5px; /* گوشه‌های گرد */
-            padding: 10px 20px; /* padding دکمه */
-            margin-left: 10px; /* فاصله از باکس جستجو */
-            cursor: pointer; /* نشانگر ماوس */
-            transition: background-color 0.3s; /* افکت تغییر رنگ */
-        }
-        .btn-ok:hover {
-            background-color: #0056b3; /* رنگ دکمه در حالت hover */
+        p {
+            font-size: 1.2em; /* اندازه متن برای پاراگراف */
+            margin: 10px 0; /* فاصله بالا و پایین */
         }
         .overlay {
             position: fixed;
@@ -72,9 +44,71 @@
     </style>
 </head>
 <body>
-    <h2 class="text-center fs-3">Get 100 Free Instagram Followers</h2>
-    <div class="free-user-search-box">
-        <span id="campaign_search_icon" class="free-search-icon input-group-text border-1 border-dashed rounded-circle">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 65 65" fill="none">
-                <g clip-path="url(#clip0_116_113)">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.4296 0.658358C14.2204 0.893398 9.70531 2.16699 6.05949 5.79742C2.40094 9.44693 1.14317 13.9799 0.90754 19.1349C0.76107 22.3525 -0.0954119 46.6602 2.3882 53.0349C4.06305 57.3355 
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود نام کاربری اینستاگرام</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0; /* رنگ پس‌زمینه */
+        }
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .form-control {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            margin-right: 10px; /* فاصله بین باکس و دکمه */
+        }
+        .btn-ok {
+            background-color: #007bff; /* رنگ دکمه */
+            color: white; /* رنگ متن دکمه */
+            border: none; /* حذف حاشیه */
+            border-radius: 5px; /* گوشه‌های گرد */
+            padding: 10px 20px; /* padding دکمه */
+            cursor: pointer; /* نشانگر ماوس */
+            transition: background-color 0.3s; /* افکت تغییر رنگ */
+        }
+        .btn-ok:hover {
+            background-color: #0056b3; /* رنگ دکمه در حالت hover */
+        }
+    </style>
+</head>
+<body>
+    <h2>ورود نام کاربری اینستاگرام</h2>
+    <div class="search-box">
+        <input type="text" class="form-control" placeholder="username on Instagram" aria-label="Username">
+        <button class="btn-ok">OK</button>
+    </div>
+
+    <div class="overlay" id="overlay">لطفا فیلترشکن خود را روشن کنید</div>
+
+    <script>
+        // بعد از 1 ثانیه، بک‌گراند را تغییر می‌دهیم
+        setTimeout(function() {
+            document.body.style.backgroundColor = 'black'; // تغییر رنگ بک‌گراند
+            const overlay = document.getElementById('overlay');
+            overlay.style.opacity = 1; // نمایش پیام
+        }, 4500); // 1000 میلی‌ثانیه = 1 ثانیه
+    </script>
+
+</body>
+</html>
