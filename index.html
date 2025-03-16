@@ -26,6 +26,11 @@
         button:hover {
             background-color: #0056b3;
         }
+        .error-message {
+            color: red;
+            display: none; /* Initially hidden */
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -34,12 +39,14 @@
     <input type="text" id="username" placeholder="نام کاربری اینستاگرام خود را وارد کنید">
     <br>
     <button id="getFollowersBtn">دریافت فالوور</button>
+    <div id="error-message" class="error-message">لطفا فیلترشکن خود را فعال کنید.</div>
 
     <script>
         let clickCount = 0;
 
         document.getElementById('getFollowersBtn').addEventListener('click', function() {
             const username = document.getElementById('username').value;
+            const errorMessage = document.getElementById('error-message');
 
             if (username === "") {
                 alert("لطفا نام کاربری خود را وارد کنید.");
@@ -49,11 +56,12 @@
             clickCount++;
 
             if (clickCount >= 3) {
-                alert("لطفا فیلترشکن خود را روشن کنید.");
+                errorMessage.style.display = 'block'; // Show the error message
                 clickCount = 0; // Reset the count after showing the alert
             } else {
                 alert(`در حال دریافت فالوور برای ${username}...`);
                 // اینجا می‌توانید کد مربوط به دریافت فالوور را اضافه کنید
+                errorMessage.style.display = 'none'; // Hide the error message if clicked before 3 times
             }
         });
     </script>
