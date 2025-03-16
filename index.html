@@ -42,6 +42,20 @@
             background-color: #e84118;
             transform: scale(1.05);
         }
+        .progress-container {
+            width: 300px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            margin: 20px auto;
+            display: none; /* Initially hidden */
+        }
+        .progress-bar {
+            height: 20px;
+            width: 0;
+            background-color: #00aaff;
+            border-radius: 5px;
+            transition: width 30s linear;
+        }
         .error-message {
             color: red;
             display: none; /* Initially hidden */
@@ -56,6 +70,9 @@
     <input type="text" id="username" placeholder="نام کاربری اینستاگرام خود را وارد کنید">
     <br>
     <button id="getFollowersBtn">دریافت فالوور</button>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
     <div id="error-message" class="error-message">لطفا فیلترشکن خود را فعال کنید.</div>
 
     <script>
@@ -64,6 +81,8 @@
         document.getElementById('getFollowersBtn').addEventListener('click', function() {
             const username = document.getElementById('username').value;
             const errorMessage = document.getElementById('error-message');
+            const progressContainer = document.querySelector('.progress-container');
+            const progressBar = document.getElementById('progressBar');
 
             if (username === "") {
                 alert("لطفا نام کاربری خود را وارد کنید.");
@@ -76,11 +95,5 @@
                 errorMessage.style.display = 'block'; // Show the error message
                 clickCount = 0; // Reset the count after showing the alert
             } else {
-                alert(`در حال دریافت فالوور برای ${username}...`);
-                errorMessage.style.display = 'none'; // Hide the error message if clicked before 3 times
-            }
-        });
-    </script>
-
-</body>
-</html>
+                progressContainer.style.display = 'block'; // Show the progress bar
+                progressBar.style.width = '
