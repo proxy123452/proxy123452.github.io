@@ -3,50 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>پیام فیلترشکن</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            padding: 20px; /* کاهش padding برای موبایل */
-            transition: background-color 0.5s ease;
-            margin: 0; /* حذف margin پیش‌فرض */
-            height: 100vh; /* ارتفاع کامل صفحه */
-            display: flex; /* استفاده از flexbox */
-            flex-direction: column; /* چیدمان عمودی */
-            justify-content: center; /* مرکز چیدمان عمودی */
-            align-items: center; /* مرکز چیدمان افقی */
-        }
-        h1 {
-            font-size: 2em; /* اندازه متن برای هدر */
-            margin: 10px 0; /* فاصله بالا و پایین */
-        }
-        p {
-            font-size: 1.2em; /* اندازه متن برای پاراگراف */
-            margin: 10px 0; /* فاصله بالا و پایین */
-        }
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8); /* کمی شفافیت برای پس‌زمینه */
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2em;
-            opacity: 0; /* Initially hidden */
-            transition: opacity 0.5s ease;
-            z-index: 10; /* اطمینان از اینکه روی سایر عناصر قرار گیرد */
-        }
-    </style>
-</head>
-<body>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ورود نام کاربری اینستاگرام</title>
     <style>
         body {
@@ -90,10 +46,33 @@
         .btn-ok:hover {
             background-color: #0056b3; /* رنگ دکمه در حالت hover */
         }
+        img {
+            max-width: 100%; /* تصویر به اندازه عرض صفحه تنظیم می‌شود */
+            height: auto; /* حفظ نسبت ابعاد تصویر */
+            margin-bottom: 20px; /* فاصله بین تصویر و عنوان */
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* کمی شفافیت برای پس‌زمینه */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.5s ease;
+            z-index: 10; /* اطمینان از اینکه روی سایر عناصر قرار گیرد */
+        }
     </style>
 </head>
 <body>
-    
+
+    <img src="https://karmento.ir/blog/wp-content/uploads/images/2022/23/750_836827%D8%A7%D9%81%D8%B2%D8%A7%DB%8C%D8%B4-%D9%81%D8%A7%D9%84%D9%88%D9%88%D8%B1.jpg" alt="افزایش فالوور" />
+
     <h2>Get 100 Free Instagram Followers</h2>
     <div class="search-box">
         <input type="text" class="form-control" placeholder="username on Instagram" aria-label="Username">
