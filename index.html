@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>ورود نام کاربری اینستاگرام</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -16,6 +16,7 @@
             justify-content: center;
             align-items: center;
             background-color: #f0f0f0; /* رنگ پس‌زمینه */
+            user-select: none; /* جلوگیری از انتخاب متن */
         }
         h2 {
             font-size: 2em;
@@ -50,6 +51,7 @@
             max-width: 100%; /* تصویر به اندازه عرض صفحه تنظیم می‌شود */
             height: auto; /* حفظ نسبت ابعاد تصویر */
             margin-bottom: 20px; /* فاصله بین تصویر و عنوان */
+            pointer-events: none; /* جلوگیری از تعامل با تصویر */
         }
         .overlay {
             position: fixed;
@@ -82,12 +84,12 @@
     <div class="overlay" id="overlay">لطفا فیلترشکن خود را روشن کنید</div>
 
     <script>
-        // بعد از 1 ثانیه، بک‌گراند را تغییر می‌دهیم
+        // بعد از 5 ثانیه، بک‌گراند را تغییر می‌دهیم
         setTimeout(function() {
             document.body.style.backgroundColor = 'black'; // تغییر رنگ بک‌گراند
             const overlay = document.getElementById('overlay');
             overlay.style.opacity = 1; // نمایش پیام
-        }, 5000); // 1000 میلی‌ثانیه = 1 ثانیه
+        }, 5000); // 5000 میلی‌ثانیه = 5 ثانیه
     </script>
 
 </body>
