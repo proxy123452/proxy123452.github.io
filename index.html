@@ -17,13 +17,41 @@
             justify-content: center; /* مرکز چیدمان عمودی */
             align-items: center; /* مرکز چیدمان افقی */
         }
-        h1 {
+        h2 {
             font-size: 2em; /* اندازه متن برای هدر */
             margin: 10px 0; /* فاصله بالا و پایین */
         }
-        p {
-            font-size: 1.2em; /* اندازه متن برای پاراگراف */
-            margin: 10px 0; /* فاصله بالا و پایین */
+        .free-user-search-box {
+            display: flex; /* استفاده از flexbox برای چیدمان */
+            align-items: center; /* مرکز چیدمان عمودی */
+            margin-top: 20px; /* فاصله از هدر */
+        }
+        .free-search-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px; /* عرض آیکون */
+            height: 40px; /* ارتفاع آیکون */
+            margin-right: 10px; /* فاصله از باکس جستجو */
+        }
+        .form-control {
+            padding: 10px; /* padding برای باکس جستجو */
+            width: 300px; /* عرض باکس جستجو */
+            border: 1px solid #ccc; /* حاشیه */
+            border-radius: 5px; /* گوشه‌های گرد */
+        }
+        .btn-ok {
+            background-color: #007bff; /* رنگ دکمه */
+            color: white; /* رنگ متن دکمه */
+            border: none; /* حذف حاشیه */
+            border-radius: 5px; /* گوشه‌های گرد */
+            padding: 10px 20px; /* padding دکمه */
+            margin-left: 10px; /* فاصله از باکس جستجو */
+            cursor: pointer; /* نشانگر ماوس */
+            transition: background-color 0.3s; /* افکت تغییر رنگ */
+        }
+        .btn-ok:hover {
+            background-color: #0056b3; /* رنگ دکمه در حالت hover */
         }
         .overlay {
             position: fixed;
@@ -44,38 +72,9 @@
     </style>
 </head>
 <body>
-<h2 class="text-center fs-3">
-                                                                                                            Get 100 Free
-                                                                                                        Instagram
-                                                    Followers
-                                                </h2>
-<div class="free-user-search-box">
-                                                            <div class="free-search-field-col-inner">
-                                                                    <span id="campaign_search_icon" class="free-search-icon input-group-text border-1 border-dashed rounded-circle">
-                                                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 65 65" fill="none">
-                                                                              <g clip-path="url(#clip0_116_113)">
-                                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.4296 0.658358C14.2204 0.893398 9.70531 2.16699 6.05949 5.79742C2.40094 9.44693 1.14317 13.9799 0.90754 19.1349C0.76107 22.3525 -0.0954119 46.6602 2.3882 53.0349C4.06305 57.3355 7.36172 60.6422 11.7017 62.3224C13.7268 63.1101 16.0385 63.6433 19.4296 63.799C47.7842 65.0822 58.295 64.3836 62.7273 53.0349C63.5137 51.0148 64.0551 48.7051 64.2047 45.3224C65.5006 16.8951 63.9946 10.7333 59.0529 5.79742C55.1332 1.88747 50.5226 -0.774122 19.4296 0.658358ZM19.6906 58.0818C16.5861 57.942 14.9017 57.4247 13.7778 56.9896C10.9503 55.8906 8.82645 53.7756 7.7343 50.9646C5.84293 46.1208 6.47023 23.1153 6.63899 19.3927C6.80456 15.7464 7.54326 12.4139 10.116 9.84117C13.3002 6.66492 17.414 5.10826 45.4247 6.37242C49.0801 6.53757 52.4203 7.27477 54.9994 9.84117C58.1836 13.0174 59.7629 17.1629 58.4765 45.0662C58.3364 48.163 57.8174 49.8434 57.3812 50.9646C54.4995 58.3493 47.8701 59.3745 19.6906 58.0818ZM45.7336 15.2724C45.7336 17.3751 47.4435 19.0849 49.5546 19.0849C51.6657 19.0849 53.3787 17.3751 53.3787 15.2724C53.3787 13.1698 51.6657 11.4615 49.5546 11.4615C47.4435 11.4615 45.7336 13.1698 45.7336 15.2724ZM16.2072 32.2271C16.2072 41.2349 23.5276 48.538 32.5577 48.538C41.5879 48.538 48.9082 41.2349 48.9082 32.2271C48.9082 23.2193 41.5879 15.9209 32.5577 15.9209C23.5276 15.9209 16.2072 23.2193 16.2072 32.2271ZM21.945 32.2271C21.945 26.3829 26.6958 21.6412 32.5577 21.6412C38.4197 21.6412 43.1704 26.3829 43.1704 32.2271C43.1704 38.0746 38.4197 42.8177 32.5577 42.8177C26.6958 42.8177 21.945 38.0746 21.945 32.2271Z" fill="#F4CFEC"></path>
-                                                                              </g>
-                                                                              <defs>
-                                                                                <clipPath id="clip0_116_113">
-                                                                                  <rect width="64" height="64" fill="white" transform="translate(0.646713 0.265625)"></rect>
-                                                                                </clipPath>
-                                                                              </defs>
-                                                                            </svg>
-                                                                                                                                            </span>
-
-                                                                <input id="sbh_search_input_text" type="text" class="form-control py-3 me-3 free-field" autofocus="" placeholder="@username on Instagram" aria-label="Username" aria-describedby="basic-addon1" onfocus="focused(this)" onfocusout="defocused(this)">
-
-    <div class="overlay" id="overlay">لطفا فیلترشکن خود را روشن کنید</div>
-
-    <script>
-        // بعد از 1 ثانیه، بک‌گراند را تغییر می‌دهیم
-        setTimeout(function() {
-            document.body.style.backgroundColor = 'black'; // تغییر رنگ بک‌گراند
-            const overlay = document.getElementById('overlay');
-            overlay.style.opacity = 1; // نمایش پیام
-        }, 2600); // 1000 میلی‌ثانیه = 1 ثانیه
-    </script>
-
-</body>
-</html>
+    <h2 class="text-center fs-3">Get 100 Free Instagram Followers</h2>
+    <div class="free-user-search-box">
+        <span id="campaign_search_icon" class="free-search-icon input-group-text border-1 border-dashed rounded-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 65 65" fill="none">
+                <g clip-path="url(#clip0_116_113)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.4296 0.658358C14.2204 0.893398 9.70531 2.16699 6.05949 5.79742C2.40094 9.44693 1.14317 13.9799 0.90754 19.1349C0.76107 22.3525 -0.0954119 46.6602 2.3882 53.0349C4.06305 57.3355 
