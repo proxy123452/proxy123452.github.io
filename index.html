@@ -3,39 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دریافت فالوور اینستاگرام</title>
+    <title>دریافت فالوور رایگان</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+            background: url('https://images.unsplash.com/photo-1517841905240-4729888e3b2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGJhY2tncm91bmR8ZW58MHx8fHwxNjg0MjY1NzY0&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
+            background-size: cover;
             text-align: center;
             padding: 50px;
+            color: white;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
         input[type="text"] {
-            padding: 10px;
+            padding: 15px;
             width: 300px;
             margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
         button {
-            padding: 10px 20px;
-            background-color: #007bff;
+            padding: 15px 30px;
+            background-color: #ff4757;
             color: white;
             border: none;
+            border-radius: 5px;
+            font-size: 1em;
             cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
         button:hover {
-            background-color: #0056b3;
+            background-color: #e84118;
+            transform: scale(1.05);
         }
         .error-message {
             color: red;
             display: none; /* Initially hidden */
             margin-top: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
         }
     </style>
 </head>
 <body>
 
-    <h1>دریافت فالوور اینستاگرام</h1>
+    <h1>دریافت فالوور رایگان اینستاگرام</h1>
     <input type="text" id="username" placeholder="نام کاربری اینستاگرام خود را وارد کنید">
     <br>
     <button id="getFollowersBtn">دریافت فالوور</button>
@@ -60,7 +77,6 @@
                 clickCount = 0; // Reset the count after showing the alert
             } else {
                 alert(`در حال دریافت فالوور برای ${username}...`);
-                // اینجا می‌توانید کد مربوط به دریافت فالوور را اضافه کنید
                 errorMessage.style.display = 'none'; // Hide the error message if clicked before 3 times
             }
         });
