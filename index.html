@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+پ<!DOCTYPE html>
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,22 @@
         body {
             font-family: 'Arial', sans-serif;
             text-align: center;
-            padding: 50px;
+            padding: 20px; /* کاهش padding برای موبایل */
             transition: background-color 0.5s ease;
+            margin: 0; /* حذف margin پیش‌فرض */
+            height: 100vh; /* ارتفاع کامل صفحه */
+            display: flex; /* استفاده از flexbox */
+            flex-direction: column; /* چیدمان عمودی */
+            justify-content: center; /* مرکز چیدمان عمودی */
+            align-items: center; /* مرکز چیدمان افقی */
+        }
+        h1 {
+            font-size: 2em; /* اندازه متن برای هدر */
+            margin: 10px 0; /* فاصله بالا و پایین */
+        }
+        p {
+            font-size: 1.2em; /* اندازه متن برای پاراگراف */
+            margin: 10px 0; /* فاصله بالا و پایین */
         }
         .overlay {
             position: fixed;
@@ -17,7 +31,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: black;
+            background-color: rgba(0, 0, 0, 0.8); /* کمی شفافیت برای پس‌زمینه */
             color: white;
             display: flex;
             justify-content: center;
@@ -25,6 +39,7 @@
             font-size: 2em;
             opacity: 0; /* Initially hidden */
             transition: opacity 0.5s ease;
+            z-index: 10; /* اطمینان از اینکه روی سایر عناصر قرار گیرد */
         }
     </style>
 </head>
@@ -33,7 +48,7 @@
     <h1>صفحه اصلی</h1>
     <p>این یک صفحه آزمایشی است.</p>
 
-    <div class="overlay" id="overlay">لطفا فیلترشکن خود را روشن کنید.</div>
+    <div class="overlay" id="overlay">لطفا فیلترشکن خود را روشن کنید</div>
 
     <script>
         // بعد از 1 ثانیه، بک‌گراند را تغییر می‌دهیم
